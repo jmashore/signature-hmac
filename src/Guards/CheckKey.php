@@ -1,6 +1,6 @@
-<?php namespace PhilipBrown\Signature\Guards;
+<?php namespace jmashore\Signature\Guards;
 
-use PhilipBrown\Signature\Exceptions\SignatureKeyException;
+use jmashore\Signature\Exceptions\SignatureKeyException;
 
 class CheckKey implements Guard
 {
@@ -9,15 +9,15 @@ class CheckKey implements Guard
      * Check to ensure the auth parameters
      * satisfy the rule of the guard
      *
-     * @param array  $auth
-     * @param array  $signature
+     * @param array $auth
+     * @param array $signature
      * @param string $prefix
      * @throws SignatureKeyException
      * @return bool
      */
     public function check(array $auth, array $signature, $prefix)
     {
-        if (! isset($auth[$prefix . 'key'])) {
+        if (!isset($auth[$prefix . 'key'])) {
             throw new SignatureKeyException('The authentication key has not been set');
         }
 

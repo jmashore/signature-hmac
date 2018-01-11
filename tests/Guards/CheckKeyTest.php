@@ -1,6 +1,6 @@
-<?php namespace PhilipBrown\Signature\Tests\Guards;
+<?php namespace jmashore\Signature\Tests\Guards;
 
-use PhilipBrown\Signature\Guards\CheckKey;
+use jmashore\Signature\Guards\CheckKey;
 
 class CheckKeyTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,7 +15,7 @@ class CheckKeyTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_missing_key()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureKeyException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureKeyException');
 
         $this->guard->check([], ['auth_key' => 'abc123'], 'auth_');
     }
@@ -23,7 +23,7 @@ class CheckKeyTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_invalid_key()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureKeyException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureKeyException');
 
         $this->guard->check(['auth_key' => 'edf456'], ['auth_key' => 'abc123'], 'auth_');
     }

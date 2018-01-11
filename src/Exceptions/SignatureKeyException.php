@@ -1,4 +1,4 @@
-<?php namespace PhilipBrown\Signature\Exceptions;
+<?php namespace jmashore\Signature\Exceptions;
 
 class SignatureKeyException extends SignatureException
 {

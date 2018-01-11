@@ -1,6 +1,6 @@
-<?php namespace PhilipBrown\Signature\Tests\Guards;
+<?php namespace jmashore\Signature\Tests\Guards;
 
-use PhilipBrown\Signature\Guards\CheckSignature;
+use jmashore\Signature\Guards\CheckSignature;
 
 class CheckSignatureTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,7 +15,7 @@ class CheckSignatureTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_missing_signature()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureSignatureException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureSignatureException');
 
         $this->guard->check([], [], 'auth_');
     }
@@ -23,7 +23,7 @@ class CheckSignatureTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_invalid_hash()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureException');
 
         $this->guard->check(['auth_signature' => 'hello'], ['auth_signature' => 'world'], 'auth_');
     }

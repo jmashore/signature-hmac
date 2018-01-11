@@ -1,12 +1,12 @@
-<?php namespace PhilipBrown\Signature\Tests;
+<?php namespace jmashore\Signature\Tests;
 
-use PhilipBrown\Signature\Auth;
-use PhilipBrown\Signature\Token;
-use PhilipBrown\Signature\Request;
-use PhilipBrown\Signature\Guards\CheckKey;
-use PhilipBrown\Signature\Guards\CheckVersion;
-use PhilipBrown\Signature\Guards\CheckSignature;
-use PhilipBrown\Signature\Guards\CheckTimestamp;
+use jmashore\Signature\Auth;
+use jmashore\Signature\Token;
+use jmashore\Signature\Request;
+use jmashore\Signature\Guards\CheckKey;
+use jmashore\Signature\Guards\CheckVersion;
+use jmashore\Signature\Guards\CheckSignature;
+use jmashore\Signature\Guards\CheckTimestamp;
 
 class AuthTest extends \PHPUnit_Framework_TestCase
 {
@@ -24,7 +24,7 @@ class AuthTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_invalid_version()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureVersionException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureVersionException');
 
         $this->params['auth_version'] = '2.0';
 
@@ -38,7 +38,7 @@ class AuthTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_invalid_key()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureKeyException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureKeyException');
 
         $this->params['auth_key'] = 'edf456';
 
@@ -52,7 +52,7 @@ class AuthTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_invalid_timestamp()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureTimestampException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureTimestampException');
 
         $this->params['auth_timestamp'] = time() + 60 * 60;
 
@@ -66,7 +66,7 @@ class AuthTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_invalid_signature()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureSignatureException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureSignatureException');
 
         $this->params['auth_signature'] = '';
 

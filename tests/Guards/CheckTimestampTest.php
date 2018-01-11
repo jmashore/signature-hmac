@@ -1,6 +1,6 @@
-<?php namespace PhilipBrown\Signature\Tests\Guards;
+<?php namespace jmashore\Signature\Tests\Guards;
 
-use PhilipBrown\Signature\Guards\CheckTimestamp;
+use jmashore\Signature\Guards\CheckTimestamp;
 
 class CheckTimestampTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,7 +15,7 @@ class CheckTimestampTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_missing_timestamp()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureTimestampException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureTimestampException');
 
         $this->guard->check([], [], 'auth_');
     }
@@ -23,7 +23,7 @@ class CheckTimestampTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_expired_timestamp()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureTimestampException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureTimestampException');
 
         $timestamp = time() + 60 * 60;
 
@@ -33,7 +33,7 @@ class CheckTimestampTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_future_expired_timestamp()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureTimestampException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureTimestampException');
 
         $timestamp = time() - 60 * 60;
 

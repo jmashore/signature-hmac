@@ -1,6 +1,6 @@
-<?php namespace PhilipBrown\Signature\Guards;
+<?php namespace jmashore\Signature\Guards;
 
-use PhilipBrown\Signature\Exceptions\SignatureTimestampException;
+use jmashore\Signature\Exceptions\SignatureTimestampException;
 
 class CheckTimestamp implements Guard
 {

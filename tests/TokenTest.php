@@ -1,6 +1,6 @@
-<?php namespace PhilipBrown\Signature\Tests;
+<?php namespace jmashore\Signature\Tests;
 
-use PhilipBrown\Signature\Token;
+use jmashore\Signature\Token;
 
 class TokenTest extends \PHPUnit_Framework_TestCase
 {
@@ -9,7 +9,7 @@ class TokenTest extends \PHPUnit_Framework_TestCase
     {
         $token = new Token('key', 'secret');
 
-        $this->assertInstanceOf('PhilipBrown\Signature\Token', $token);
+        $this->assertInstanceOf('jmashore\Signature\Token', $token);
         $this->assertEquals('key', $token->key());
         $this->assertEquals('secret', $token->secret());
     }

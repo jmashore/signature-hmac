@@ -1,7 +1,7 @@
-<?php namespace PhilipBrown\Signature\Guards;
+<?php namespace jmashore\Signature\Guards;
 
-use PhilipBrown\Signature\Signature;
-use PhilipBrown\Signature\Exceptions\SignatureVersionException;
+use jmashore\Signature\Signature;
+use jmashore\Signature\Exceptions\SignatureVersionException;
 
 class CheckVersion implements Guard
 {

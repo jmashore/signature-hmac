@@ -1,7 +1,7 @@
-<?php namespace PhilipBrown\Signature\Tests;
+<?php namespace jmashore\Signature\Tests;
 
-use PhilipBrown\Signature\Token;
-use PhilipBrown\Signature\Request;
+use jmashore\Signature\Token;
+use jmashore\Signature\Request;
 
 class RequestTest extends \PHPUnit_Framework_TestCase
 {

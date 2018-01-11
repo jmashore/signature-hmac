@@ -1,6 +1,6 @@
-<?php namespace PhilipBrown\Signature\Tests\Guards;
+<?php namespace jmashore\Signature\Tests\Guards;
 
-use PhilipBrown\Signature\Guards\CheckVersion;
+use jmashore\Signature\Guards\CheckVersion;
 
 class CheckVersionTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,7 +15,7 @@ class CheckVersionTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_missing_version_number()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureVersionException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureVersionException');
 
         $this->guard->check([], ['auth_version' => '4.0.0'], 'auth_');
     }
@@ -23,7 +23,7 @@ class CheckVersionTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function should_throw_exception_on_invalid_version_number()
     {
-        $this->setExpectedException('PhilipBrown\Signature\Exceptions\SignatureVersionException');
+        $this->setExpectedException('jmashore\Signature\Exceptions\SignatureVersionException');
 
         $this->guard->check(['auth_version' => '1.1'], ['auth_version' => '4.0.0'], 'auth_');
     }

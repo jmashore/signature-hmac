@@ -1,15 +1,15 @@
 # Signature
-
+**A port of Philip Browns [Signature-php](https://github.com/philipbrown/signature-php)**
 **A PHP 5.4+ port of the [Signature](https://github.com/mloughran/signature) ruby gem**
 
-[![Build Status](https://travis-ci.org/philipbrown/signature-php.png?branch=master)](https://travis-ci.org/philipbrown/signature-php)
-[![Code Coverage](https://scrutinizer-ci.com/g/philipbrown/signature-php/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/philipbrown/signature-php/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/philipbrown/signature-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/philipbrown/signature-php/?branch=master)
+[![Build Status](https://travis-ci.org/jmashore/signature-php.png?branch=master)](https://travis-ci.org/jmashore/signature-php)
+[![Code Coverage](https://scrutinizer-ci.com/g/jmashore/signature-php/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/jmashore/signature-php/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jmashore/signature-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jmashore/signature-php/?branch=master)
 
 ## Installation
-Add `philipbrown/signature-php` as a requirement to `composer.json`:
+Add `jmashore/signature-php` as a requirement to `composer.json`:
 ```bash
-$ composer require philipbrown/signature-php
+$ composer require jmashore/signature-php
 ```
 
 ## What is HMAC-SHA authentication?
@@ -17,8 +17,8 @@ HMAC-SHA authentication allows you to implement very simple key / secret authent
 
 ## Making a request
 ```php
-use PhilipBrown\Signature\Token;
-use PhilipBrown\Signature\Request;
+use jmashore\Signature\Token;
+use jmashore\Signature\Request;
 
 $data    = ['name' => 'Philip Brown'];
 $token   = new Token('abc123', 'qwerty');
@@ -32,13 +32,13 @@ $http->post('users', array_merge($auth, $data));
 
 ## Authenticating a response
 ```php
-use PhilipBrown\Signature\Auth;
-use PhilipBrown\Signature\Token;
-use PhilipBrown\Signature\Guards\CheckKey;
-use PhilipBrown\Signature\Guards\CheckVersion;
-use PhilipBrown\Signature\Guards\CheckTimestamp;
-use PhilipBrown\Signature\Guards\CheckSignature;
-use PhilipBrown\Signature\Exceptions\SignatureException;
+use jmashore\Signature\Auth;
+use jmashore\Signature\Token;
+use jmashore\Signature\Guards\CheckKey;
+use jmashore\Signature\Guards\CheckVersion;
+use jmashore\Signature\Guards\CheckTimestamp;
+use jmashore\Signature\Guards\CheckSignature;
+use jmashore\Signature\Exceptions\SignatureException;
 
 $auth  = new Auth('POST', 'users', $_POST, [
 	new CheckKey,

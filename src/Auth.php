@@ -1,4 +1,4 @@
-<?php namespace PhilipBrown\Signature;
+<?php namespace jmashore\Signature;
 
 class Auth
 {

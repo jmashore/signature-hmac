@@ -1,6 +1,6 @@
-<?php namespace PhilipBrown\Signature\Guards;
+<?php namespace jmashore\Signature\Guards;
 
-use PhilipBrown\Signature\Signature;
+use jmashore\Signature\Signature;
 
 interface Guard
 {
