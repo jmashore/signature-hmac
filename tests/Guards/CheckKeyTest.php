@@ -1,6 +1,9 @@
 <?php namespace jmashore\Signature\Tests\Guards;
 
+/* CheckKeyTest */
 use jmashore\Signature\Guards\CheckKey;
+
+/* This is my change */
 
 class CheckKeyTest extends \PHPUnit_Framework_TestCase
 {
