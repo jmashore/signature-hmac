@@ -1,5 +1,5 @@
 {
-  "name": "jmashore/signature-php",
+  "name": "jmashore/signature-hmac",
   "description": "HMAC-SHA authentication",
   "keywords": [
     "HMAC-SHA",

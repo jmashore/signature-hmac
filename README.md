@@ -7,9 +7,9 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jmashore/signature-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jmashore/signature-php/?branch=master)
 
 ## Installation
-Add `jmashore/signature-php` as a requirement to `composer.json`:
+Add `jmashore/signature-hmac` as a requirement to `composer.json`:
 ```bash
-$ composer require jmashore/signature-php
+$ composer require jmashore/signature-hmac
 ```
 
 ## What is HMAC-SHA authentication?
