@@ -2,9 +2,9 @@
 **A port of Philip Browns [Signature-php](https://github.com/philipbrown/signature-php)**
 **A PHP 5.4+ port of the [Signature](https://github.com/mloughran/signature) ruby gem**
 
-[![Build Status](https://travis-ci.org/jmashore/signature-php.png?branch=master)](https://travis-ci.org/jmashore/signature-php)
-[![Code Coverage](https://scrutinizer-ci.com/g/jmashore/signature-php/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/jmashore/signature-php/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jmashore/signature-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jmashore/signature-php/?branch=master)
+[![Build Status](https://travis-ci.org/jmashore/signature-hmac.png?branch=master)](https://travis-ci.org/jmashore/signature-hmac)
+[![Code Coverage](https://scrutinizer-ci.com/g/jmashore/signature-hmac/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/jmashore/signature-hmac/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jmashore/signature-hmac/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jmashore/signature-hmac/?branch=master)
 
 ## Installation
 Add `jmashore/signature-hmac` as a requirement to `composer.json`:
