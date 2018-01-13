@@ -33,6 +33,9 @@ class Request
      * @param string $uri
      * @param array $params
      * @param integer $timestamp -> Default is use client Time (Self), or value of $timestamp
+     *
+     * Changed because sometimes false could have been passed in accidently. Masking the use
+     * of client time.
      */
     public function __construct($method, $uri, array $params = [], $timestamp = 'Self')
     {
