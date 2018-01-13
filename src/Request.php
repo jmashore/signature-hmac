@@ -32,28 +32,28 @@ class Request
      * @param string $method
      * @param string $uri
      * @param array $params
-     * @param integer $timestamp
+     * @param integer $timestamp -> Default is use client Time (Self), or value of $timestamp
      */
-    public function __construct($method, $uri, array $params = [], $timestamp = null)
+    public function __construct($method, $uri, array $params = [], $timestamp = 'Self')
     {
-        $this->method    = strtoupper($method);
-        $this->uri       = $uri;
-        $this->params    = $params;
-        $this->timestamp = $timestamp ?: time();
+        $this->method = strtoupper($method);
+        $this->uri = $uri;
+        $this->params = $params;
+        $this->timestamp = ($timestamp == strtolower('self')) ? time() : $timestamp;
     }
 
     /**
      * Sign the Request with a Token
      *
-     * @param Token  $token
+     * @param Token $token
      * @param string $prefix
      * @return array
      */
     public function sign(Token $token, $prefix = self::PREFIX)
     {
         $auth = [
-            $prefix . 'version'   => self::VERSION,
-            $prefix . 'key'       => $token->key(),
+            $prefix . 'version' => self::VERSION,
+            $prefix . 'key' => $token->key(),
             $prefix . 'timestamp' => $this->timestamp,
         ];
 
