@@ -42,7 +42,7 @@ class Request
         $this->method = strtoupper($method);
         $this->uri = $uri;
         $this->params = $params;
-        $this->timestamp = ($timestamp == strtolower('self')) ? time() : $timestamp;
+        $this->timestamp = (strtolower($timestamp) == 'self') ? time() : $timestamp;
     }
 
     /**
